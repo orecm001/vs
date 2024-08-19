@@ -4,8 +4,6 @@ jobs:
     working_directory: ~/app
     docker:
       - image: cimg/base:2022.09
-    parallelism: 20
-        
     steps:
       - checkout
       - setup_remote_docker:
@@ -13,5 +11,5 @@ jobs:
       - run:
           name: Run tests
           command: |
-            docker  build -t mbc . --progress=plain
-            docker run mbc
+            docker  build -t ore . --progress=plain
+            docker run ore
